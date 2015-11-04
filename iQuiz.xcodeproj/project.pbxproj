@@ -1,0 +1,309 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ADDE5EFC1BE96F4400F0080E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDE5EFB1BE96F4400F0080E /* AppDelegate.swift */; };
+		ADDE5EFE1BE96F4400F0080E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDE5EFD1BE96F4400F0080E /* ViewController.swift */; };
+		ADDE5F011BE96F4400F0080E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADDE5EFF1BE96F4400F0080E /* Main.storyboard */; };
+		ADDE5F061BE96F4400F0080E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADDE5F041BE96F4400F0080E /* LaunchScreen.storyboard */; };
+		ADDE5F0E1BE96F9C00F0080E /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDE5F0D1BE96F9C00F0080E /* Subject.swift */; };
+		ADDE5F101BE9711D00F0080E /* SubjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDE5F0F1BE9711D00F0080E /* SubjectTableViewCell.swift */; };
+		ADDE5F121BE972DA00F0080E /* image in Resources */ = {isa = PBXBuildFile; fileRef = ADDE5F111BE972DA00F0080E /* image */; };
+		ADDE5F141BE9755700F0080E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADDE5F131BE9755700F0080E /* Assets.xcassets */; };
+		ADDE5F161BE97AF400F0080E /* SubjectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDE5F151BE97AF400F0080E /* SubjectTableViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		ADDE5EF81BE96F4400F0080E /* iQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADDE5EFB1BE96F4400F0080E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ADDE5EFD1BE96F4400F0080E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ADDE5F001BE96F4400F0080E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ADDE5F051BE96F4400F0080E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ADDE5F071BE96F4400F0080E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADDE5F0D1BE96F9C00F0080E /* Subject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Subject.swift; path = ../Subject.swift; sourceTree = "<group>"; };
+		ADDE5F0F1BE9711D00F0080E /* SubjectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectTableViewCell.swift; sourceTree = "<group>"; };
+		ADDE5F111BE972DA00F0080E /* image */ = {isa = PBXFileReference; lastKnownFileType = folder; name = image; path = ../image; sourceTree = "<group>"; };
+		ADDE5F131BE9755700F0080E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ADDE5F151BE97AF400F0080E /* SubjectTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectTableViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ADDE5EF51BE96F4400F0080E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ADDE5EEF1BE96F4400F0080E = {
+			isa = PBXGroup;
+			children = (
+				ADDE5EFA1BE96F4400F0080E /* iQuiz */,
+				ADDE5EF91BE96F4400F0080E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ADDE5EF91BE96F4400F0080E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ADDE5EF81BE96F4400F0080E /* iQuiz.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ADDE5EFA1BE96F4400F0080E /* iQuiz */ = {
+			isa = PBXGroup;
+			children = (
+				ADDE5F131BE9755700F0080E /* Assets.xcassets */,
+				ADDE5F0D1BE96F9C00F0080E /* Subject.swift */,
+				ADDE5EFB1BE96F4400F0080E /* AppDelegate.swift */,
+				ADDE5EFD1BE96F4400F0080E /* ViewController.swift */,
+				ADDE5F151BE97AF400F0080E /* SubjectTableViewController.swift */,
+				ADDE5EFF1BE96F4400F0080E /* Main.storyboard */,
+				ADDE5F0F1BE9711D00F0080E /* SubjectTableViewCell.swift */,
+				ADDE5F111BE972DA00F0080E /* image */,
+				ADDE5F041BE96F4400F0080E /* LaunchScreen.storyboard */,
+				ADDE5F071BE96F4400F0080E /* Info.plist */,
+			);
+			path = iQuiz;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ADDE5EF71BE96F4400F0080E /* iQuiz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADDE5F0A1BE96F4400F0080E /* Build configuration list for PBXNativeTarget "iQuiz" */;
+			buildPhases = (
+				ADDE5EF41BE96F4400F0080E /* Sources */,
+				ADDE5EF51BE96F4400F0080E /* Frameworks */,
+				ADDE5EF61BE96F4400F0080E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iQuiz;
+			productName = iQuiz;
+			productReference = ADDE5EF81BE96F4400F0080E /* iQuiz.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ADDE5EF01BE96F4400F0080E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Marco Cheng";
+				TargetAttributes = {
+					ADDE5EF71BE96F4400F0080E = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 535972V9ZD;
+					};
+				};
+			};
+			buildConfigurationList = ADDE5EF31BE96F4400F0080E /* Build configuration list for PBXProject "iQuiz" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ADDE5EEF1BE96F4400F0080E;
+			productRefGroup = ADDE5EF91BE96F4400F0080E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ADDE5EF71BE96F4400F0080E /* iQuiz */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ADDE5EF61BE96F4400F0080E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADDE5F121BE972DA00F0080E /* image in Resources */,
+				ADDE5F061BE96F4400F0080E /* LaunchScreen.storyboard in Resources */,
+				ADDE5F141BE9755700F0080E /* Assets.xcassets in Resources */,
+				ADDE5F011BE96F4400F0080E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ADDE5EF41BE96F4400F0080E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADDE5F101BE9711D00F0080E /* SubjectTableViewCell.swift in Sources */,
+				ADDE5F161BE97AF400F0080E /* SubjectTableViewController.swift in Sources */,
+				ADDE5EFE1BE96F4400F0080E /* ViewController.swift in Sources */,
+				ADDE5F0E1BE96F9C00F0080E /* Subject.swift in Sources */,
+				ADDE5EFC1BE96F4400F0080E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		ADDE5EFF1BE96F4400F0080E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ADDE5F001BE96F4400F0080E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ADDE5F041BE96F4400F0080E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ADDE5F051BE96F4400F0080E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ADDE5F081BE96F4400F0080E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ADDE5F091BE96F4400F0080E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ADDE5F0B1BE96F4400F0080E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = iQuiz/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.uw.mkpc.iQuiz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		ADDE5F0C1BE96F4400F0080E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = iQuiz/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.uw.mkpc.iQuiz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ADDE5EF31BE96F4400F0080E /* Build configuration list for PBXProject "iQuiz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADDE5F081BE96F4400F0080E /* Debug */,
+				ADDE5F091BE96F4400F0080E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADDE5F0A1BE96F4400F0080E /* Build configuration list for PBXNativeTarget "iQuiz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADDE5F0B1BE96F4400F0080E /* Debug */,
+				ADDE5F0C1BE96F4400F0080E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ADDE5EF01BE96F4400F0080E /* Project object */;
+}
