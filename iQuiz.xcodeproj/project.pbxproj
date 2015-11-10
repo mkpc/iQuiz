@@ -16,6 +16,7 @@
 		ADDE5F121BE972DA00F0080E /* image in Resources */ = {isa = PBXBuildFile; fileRef = ADDE5F111BE972DA00F0080E /* image */; };
 		ADDE5F141BE9755700F0080E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADDE5F131BE9755700F0080E /* Assets.xcassets */; };
 		ADDE5F161BE97AF400F0080E /* SubjectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDE5F151BE97AF400F0080E /* SubjectTableViewController.swift */; };
+		ADDE5F361BF1AA3F00F0080E /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDE5F351BF1AA3F00F0080E /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		ADDE5F111BE972DA00F0080E /* image */ = {isa = PBXFileReference; lastKnownFileType = folder; name = image; path = ../image; sourceTree = "<group>"; };
 		ADDE5F131BE9755700F0080E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADDE5F151BE97AF400F0080E /* SubjectTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectTableViewController.swift; sourceTree = "<group>"; };
+		ADDE5F351BF1AA3F00F0080E /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			children = (
 				ADDE5F131BE9755700F0080E /* Assets.xcassets */,
 				ADDE5F0D1BE96F9C00F0080E /* Subject.swift */,
+				ADDE5F351BF1AA3F00F0080E /* Question.swift */,
 				ADDE5EFB1BE96F4400F0080E /* AppDelegate.swift */,
 				ADDE5EFD1BE96F4400F0080E /* ViewController.swift */,
 				ADDE5F151BE97AF400F0080E /* SubjectTableViewController.swift */,
@@ -152,6 +155,7 @@
 				ADDE5F101BE9711D00F0080E /* SubjectTableViewCell.swift in Sources */,
 				ADDE5F161BE97AF400F0080E /* SubjectTableViewController.swift in Sources */,
 				ADDE5EFE1BE96F4400F0080E /* ViewController.swift in Sources */,
+				ADDE5F361BF1AA3F00F0080E /* Question.swift in Sources */,
 				ADDE5F0E1BE96F9C00F0080E /* Subject.swift in Sources */,
 				ADDE5EFC1BE96F4400F0080E /* AppDelegate.swift in Sources */,
 			);
