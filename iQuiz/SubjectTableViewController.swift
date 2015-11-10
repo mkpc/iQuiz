@@ -13,7 +13,7 @@ class SubjectTableViewController: UITableViewController {
     @IBOutlet weak var setting: UIBarButtonItem!
     
     @IBAction func settingAlert(sender: AnyObject) {
-        let alert = UIAlertController(title: "Setting", message: "Settings go here", preferredStyle: UIAlertControllerStyle.Alert)
+        let alert = UIAlertController(title: "Setting", message: "Settings go here!", preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
     }
