@@ -13,10 +13,12 @@ class Subject: NSObject {
     var subjectName: String
     var icon: UIImage?
     var subjectDescription: String
+    var questions: Array<Question>
 
-    init?(subjectName: String, icon: UIImage?, subjectDescription: String) {
+    init?(subjectName: String, icon: UIImage?, subjectDescription: String, questions : Array<Question>) {
         self.subjectName = subjectName
         self.icon = icon
         self.subjectDescription = subjectDescription
+        self.questions = questions
     }
 }

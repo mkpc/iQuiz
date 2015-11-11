@@ -18,10 +18,10 @@ class SubjectTableViewController: UITableViewController {
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
-    
-    
-    
     var subjects = [Subject]()
+    var questionMath = [Question]()
+    var questionHero = [Question]()
+    var questionSci = [Question]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,13 +34,31 @@ class SubjectTableViewController: UITableViewController {
     }
     func loadSubject() {
         let icon1 = UIImage(named: "Math")!
-        let subject1 = Subject(subjectName: "Mathematics", icon: icon1, subjectDescription: "Questions about Math!")!
+
+        let question1 = Question(questionName: "1 + 1 = ?", answerA: "1", answerB: "2", answerC: "3", answerD: "4", correctAnswer: "2")
+        let question2 = Question(questionName: "5 + 2 = ?", answerA: "7", answerB: "12", answerC: "8", answerD: "11", correctAnswer: "7")
+        let question3 = Question(questionName: "63 - 8 = ?", answerA: "55", answerB: "66", answerC: "54", answerD: "49", correctAnswer: "55")
+        let question4 = Question(questionName: "13 + 4 = ?", answerA: "17", answerB: "22", answerC: "35", answerD: "24", correctAnswer: "17")
+        let question5 = Question(questionName: "2 X 5 = ?", answerA: "12", answerB: "15", answerC: "20", answerD: "10", correctAnswer: "10")
+        questionMath = [question1!, question2!, question3!, question4!, question5!]
+        let subject1 = Subject(subjectName: "Mathematics", icon: icon1, subjectDescription: "Questions about Math!",questions: questionMath)!
+        
         
         let icon2 = UIImage(named: "SuperHero")!
-        let subject2 = Subject(subjectName: "Marvel Super Heroes", icon: icon2, subjectDescription: "Questions about Heroes")!
+        let question6 = Question(questionName: "Who is the one person who can calm The Hulk down?", answerA: "Betty Ross", answerB: "His Mom", answerC: "Rose Banner", answerD: "Betsy Rose", correctAnswer: "Betty Ross")
+        let question7 = Question(questionName: "Which villain did Jim Carrey play in Batman Forever?", answerA: "Poison Ivy", answerB: "The Penguin", answerC: "The Joker", answerD: "The Riddler", correctAnswer: "The Riddler")
+        let question8 = Question(questionName: "Who is Batman's alter ego?", answerA: "Bruce Banner.", answerB: "Clark Kent", answerC: "Peter Parker", answerD: "Bruce Wayne", correctAnswer: "Bruce Wayne")
+        questionHero = [question6!, question7!, question8!]
+        let subject2 = Subject(subjectName: "Marvel Super Heroes", icon: icon2, subjectDescription: "Questions about Heroes", questions: questionHero)!
+
+        
         
         let icon3 = UIImage(named: "Sci")!
-        let subject3 = Subject(subjectName: "Science", icon: icon3, subjectDescription: "Questions about Science")!
+        let question9 = Question(questionName: "Which kind of waves are used to make and receive cellphone calls?", answerA: "X-Ray", answerB: "Radio waves", answerC: "Light waves", answerD: "Sound waves", correctAnswer: "Radio waves")
+        let question10 = Question(questionName: "Which earth layer is the hottest?", answerA: "Crust layer", answerB: "Mantle layer", answerC: "Core layer", answerD: "All", correctAnswer: "Core layer")
+        let question11 = Question(questionName: "Which of these is the main way that ocean tides are created?", answerA: "Rotation of the Earth", answerB: "Gravitational from Moon", answerC: "Gravitational from Sun", answerD: "Gravitational from Me", correctAnswer: "Gravitational from Moon")
+        questionSci = [question9!, question10!, question11!]
+        let subject3 = Subject(subjectName: "Science", icon: icon3, subjectDescription: "Questions about Science", questions: questionSci)!
         
         subjects += [subject1, subject2, subject3]
     }
@@ -62,8 +80,6 @@ class SubjectTableViewController: UITableViewController {
         // Table view cells are reused and should be dequeued using a cell identifier.
         let cellIdentifier = "SubjectTableViewCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! SubjectTableViewCell
-        
-        // Fetches the appropriate meal for the data source layout.
         let subject = subjects[indexPath.row]
         
    
@@ -124,11 +140,23 @@ class SubjectTableViewController: UITableViewController {
     /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // In a storyboard-based application, you will often want to do a little preparation before navigation*/
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "ShowQuestion"){
+            let questionViewController = segue.destinationViewController as! QuestionViewController
+            
+            // Get the cell that generated this segue.
+            if let selectedSubjectCell = sender as? SubjectTableViewCell {
+                let indexPath = tableView.indexPathForCell(selectedSubjectCell)!
+                let selectedSubject = subjects[indexPath.row]
+                questionViewController.subject = selectedSubject
+            }
+        }
+
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+
 
 }
