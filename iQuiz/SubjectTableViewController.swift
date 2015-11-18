@@ -28,10 +28,56 @@ class SubjectTableViewController: UITableViewController {
         
         // Load the sample data.
         loadSubject()
-        
+        testDownloadTask()
         let backgroundView = UIView(frame: CGRectZero)
          self.tableView.tableFooterView = backgroundView
     }
+
+    
+    func testDownloadTask(){
+      /*  let sessionConfig = NSURLSessionConfiguration.defaultSessionConfiguration()
+        let session = NSURLSession(configuration: sessionConfig, delegate: nil, delegateQueue: nil)
+        let sourceUrl = NSURL(string: "http://tednewardsandbox.site44.com/questions.json")
+        let request = NSMutableURLRequest(URL: sourceUrl!)
+        request.HTTPMethod = "GET"
+        var json : [AnyObject]()
+        
+        let task = session.dataTaskWithRequest(request){(data, response, error)-> Void in
+       
+        
+            do{
+                json = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments) as! [AnyObject]
+            }catch{
+            
+            }
+         }
+        task.resume()
+        */
+        
+        let urlPath = "http://tednewardsandbox.site44.com/questions.json"
+        let url: NSURL = NSURL(string: urlPath)!
+        let session = NSURLSession.sharedSession()
+        let task = session.dataTaskWithURL(url, completionHandler: {data, response, error -> Void in
+            
+            if error != nil {
+                // If there is an error in the web request, print it to the console
+                print(error!.localizedDescription)
+            }
+            
+            var err: NSError?
+            
+            do{
+               var jsonResult = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
+            }catch{
+                
+            }
+        })
+        task.resume()
+    }
+
+    
+    
+    
     func loadSubject() {
         let icon1 = UIImage(named: "Math")!
 
