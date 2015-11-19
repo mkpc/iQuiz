@@ -48,12 +48,18 @@ class QuestionViewController: UIViewController {
         // Do any additional setup after loading the view.
         if let subject = subject {
             questionCount = subject.questions.count
+//            SubjectName.text = subject.subjectName
+//            questionField.text = subject.questions[counter].questionName
+//            AnswerA.text = subject.questions[counter].answerA
+//            AnswerB.text = subject.questions[counter].answerB
+//            AnswerC.text = subject.questions[counter].answerC
+//            AnswerD.text = subject.questions[counter].answerD
             SubjectName.text = subject.subjectName
-            questionField.text = subject.questions[counter].questionName
-            AnswerA.text = subject.questions[counter].answerA
-            AnswerB.text = subject.questions[counter].answerB
-            AnswerC.text = subject.questions[counter].answerC
-            AnswerD.text = subject.questions[counter].answerD
+            questionField.text = ""
+            AnswerA.text = ""
+            AnswerB.text = ""
+            AnswerC.text = ""
+            AnswerD.text = ""
         }
         
     }

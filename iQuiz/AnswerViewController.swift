@@ -29,7 +29,8 @@ class AnswerViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-            CorrectAnswer.text = subject!.questions[counter!].correctAnswer
+            //CorrectAnswer.text = subject!.questions[counter!].answers[questions![counter!].correctAnswer]
+            CorrectAnswer.text = ""
             UserAnswer.text = answer
             DoneBtn.hidden = true
             NextBtn.hidden = true
@@ -41,20 +42,20 @@ class AnswerViewController: UIViewController {
             scores = 0
         }
         
-        if(subject!.questions[counter!].correctAnswer == answer){
-            scores = scores! + 1
-            AnswerMsg.text = "You nailed it!"
-        }else{
-            AnswerMsg.text = "Good try, but it's incorrect..."
-        }
-        
-        if(counter! == (subject?.questions.count)! - 1){
-            NextBtn.hidden = true
-            DoneBtn.hidden = false
-        }else{
-            NextBtn.hidden = false
-            DoneBtn.hidden = true
-        }
+//        if(subject!.questions[counter!].answers[questions![counter!].correctAnswer] == answer){
+//            scores = scores! + 1
+//            AnswerMsg.text = "You nailed it!"
+//        }else{
+//            AnswerMsg.text = "Good try, but it's incorrect..."
+//        }
+//        
+//        if(counter! == (subject?.questions.count)! - 1){
+//            NextBtn.hidden = true
+//            DoneBtn.hidden = false
+//        }else{
+//            NextBtn.hidden = false
+//            DoneBtn.hidden = true
+//        }
 
     }
     @IBAction func NextBtn(sender: UIButton) {

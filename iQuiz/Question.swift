@@ -6,23 +6,21 @@
 //  Copyright © 2015 Marco Cheng. All rights reserved.
 //
 
+//questionName = text
+//correctAnswer = answer
+//
+
 import UIKit
 
 class Question: NSObject {
     
     var questionName: String
-    var answerA: String
-    var answerB: String
-    var answerC: String
-    var answerD: String
     var correctAnswer: String
+    var answers : NSMutableArray
     
-    init?(questionName: String, answerA: String, answerB: String, answerC: String, answerD: String, correctAnswer: String) {
+    init?(questionName: String, correctAnswer: String, answers :  NSMutableArray) {
         self.questionName = questionName
-        self.answerA = answerA
-        self.answerB = answerB
-        self.answerC = answerC
-        self.answerD = answerD
         self.correctAnswer = correctAnswer
+        self.answers = answers
     }
 }
