@@ -19,37 +19,48 @@ class SubjectTableViewController: UITableViewController {
     }
     
     var subjects = [Dictionary<String, AnyObject>]()
+    var urlPath : String?
+    var url : String = "http://tednewardsandbox.site44.com/questions.json"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Load the sample data.
-        
-        testDownloadTask()
+        if (urlPath == nil){
+            urlPath = url
+        }
+        print(urlPath!)
+        testDownloadTask(urlPath!)
         let backgroundView = UIView(frame: CGRectZero)
          self.tableView.tableFooterView = backgroundView
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if let subjects = defaults.arrayForKey("newQuizs"){
+            self.subjects = subjects as![Dictionary<String, AnyObject>]
+            
+        }
+        
     }
 
-    
-    func testDownloadTask(){
-        let urlPath = "http://tednewardsandbox.site44.com/questions.json"
+    func testDownloadTask(url : String){
+        let urlPath = url
         let url: NSURL = NSURL(string: urlPath)!
         let session = NSURLSession.sharedSession()
         let task = session.dataTaskWithURL(url, completionHandler: {data, response, error -> Void in
             if error != nil {
                 // If there is an error in the web request, print it to the console
                 print(error!.localizedDescription)
+            }else{
+                var _: NSError?
+                do{
+                    self.subjects = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! [Dictionary<String, AnyObject>]
+                    
+                    let defaults = NSUserDefaults.standardUserDefaults()
+                    defaults.setObject(self.subjects, forKey: "newQuizs")
+                }catch{
+                }
             }
-            
-            var _: NSError?
-            
-            do{
-                 self.subjects = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! [Dictionary<String, AnyObject>]
-               }catch{
-            }
+
         })
         task.resume()
-        
     }
    
     

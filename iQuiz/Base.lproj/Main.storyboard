@@ -22,6 +22,9 @@
                                 <barButtonItem title="Setting" id="R3e-as-wjm">
                                     <connections>
                                         <action selector="settingAlert:" destination="Xi5-R4-AuG" id="Lot-ar-rGD"/>
+                                        <segue destination="EFu-9l-cXT" kind="popoverPresentation" identifier="" popoverAnchorBarButtonItem="R3e-as-wjm" id="Z1S-vf-qeJ">
+                                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                        </segue>
                                     </connections>
                                 </barButtonItem>
                             </items>
@@ -85,7 +88,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KcI-B0-AyU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1501.5" y="582.75"/>
+            <point key="canvasLocation" x="1502" y="644"/>
         </scene>
         <!--Question View Controller-->
         <scene sceneID="TVB-pS-3Ja">
@@ -538,12 +541,54 @@
             </objects>
             <point key="canvasLocation" x="1429.5" y="-149.25"/>
         </scene>
+        <!--Setting View Controller-->
+        <scene sceneID="B8A-Z2-ilN">
+            <objects>
+                <viewController id="EFu-9l-cXT" customClass="SettingViewController" customModule="iQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ops-aX-4i0"/>
+                        <viewControllerLayoutGuide type="bottom" id="HlQ-3D-Oi8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sx5-mb-QxR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q29-Pv-jbM">
+                                <rect key="frame" x="20" y="124" width="344" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Source:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qkv-uG-ego">
+                                <rect key="frame" x="20" y="95" width="59" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYf-Ud-rVP">
+                                <rect key="frame" x="170" y="162" width="44" height="30"/>
+                                <state key="normal" title="Check"/>
+                                <connections>
+                                    <action selector="Check:" destination="EFu-9l-cXT" eventType="touchUpInside" id="dSL-HD-7b5"/>
+                                    <segue destination="Xi5-R4-AuG" kind="show" identifier="setting" id="9CF-7e-DVp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="URL" destination="q29-Pv-jbM" id="AYn-lz-Ioz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AY0-hU-Ebr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="834" y="582"/>
+        </scene>
     </scenes>
     <resources>
         <image name="default" width="112" height="112"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="POS-Vp-8fH"/>
         <segue reference="vIu-UG-1dd"/>
+        <segue reference="CkQ-1I-DUL"/>
     </inferredMetricsTieBreakers>
 </document>
