@@ -10,19 +10,19 @@
 //subjectDescription = desc
 //questions = questions
 
-import UIKit
-
-class Subject: NSObject {
-    
-    var subjectName: String
-    var icon: UIImage?
-    var subjectDescription: String
-    var questions: NSMutableArray
-
-    init?(subjectName: String, icon: UIImage?, subjectDescription: String, questions : NSMutableArray) {
-        self.subjectName = subjectName
-        self.icon = icon
-        self.subjectDescription = subjectDescription
-        self.questions = questions
-    }
-}
+//import UIKit
+//
+//class Subject: NSObject {
+//    
+//    var subjectName: String
+//    var icon: UIImage?
+//    var subjectDescription: String
+//    var questions: NSMutableArray
+//
+//    init?(subjectName: String, icon: UIImage?, subjectDescription: String, questions : NSMutableArray) {
+//        self.subjectName = subjectName
+//        self.icon = icon
+//        self.subjectDescription = subjectDescription
+//        self.questions = questions
+//    }
+//}

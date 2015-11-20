@@ -16,8 +16,8 @@ class AnswerViewController: UIViewController {
 
     
     var counter : Int?
-    var questions : Array<Question>?
-    var subject : Subject?
+    var questions : NSMutableArray!
+    var rightAnswer : String?
     var scores : Int?
     var answer : String?
 
@@ -27,14 +27,11 @@ class AnswerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-            //CorrectAnswer.text = subject!.questions[counter!].answers[questions![counter!].correctAnswer]
-            CorrectAnswer.text = ""
-            UserAnswer.text = answer
-            DoneBtn.hidden = true
-            NextBtn.hidden = true
-            checkAns()
+        CorrectAnswer.text = rightAnswer
+        UserAnswer.text = answer
+        DoneBtn.hidden = true
+        NextBtn.hidden = true
+        checkAns()
     }
     
     func checkAns(){
@@ -42,20 +39,20 @@ class AnswerViewController: UIViewController {
             scores = 0
         }
         
-//        if(subject!.questions[counter!].answers[questions![counter!].correctAnswer] == answer){
-//            scores = scores! + 1
-//            AnswerMsg.text = "You nailed it!"
-//        }else{
-//            AnswerMsg.text = "Good try, but it's incorrect..."
-//        }
-//        
-//        if(counter! == (subject?.questions.count)! - 1){
-//            NextBtn.hidden = true
-//            DoneBtn.hidden = false
-//        }else{
-//            NextBtn.hidden = false
-//            DoneBtn.hidden = true
-//        }
+        if(rightAnswer == answer){
+            scores = scores! + 1
+            AnswerMsg.text = "You nailed it!"
+        }else{
+            AnswerMsg.text = "Good try, but it's incorrect..."
+        }
+        
+        if(counter! == (questions.count) - 1){
+            NextBtn.hidden = true
+            DoneBtn.hidden = false
+        }else{
+            NextBtn.hidden = false
+            DoneBtn.hidden = true
+        }
 
     }
     @IBAction func NextBtn(sender: UIButton) {
@@ -80,11 +77,11 @@ class AnswerViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "NextQuestion"){
             let questionViewController = segue.destinationViewController as! QuestionViewController
-                questionViewController.subject = subject
+                questionViewController.questions = questions
                 questionViewController.counter = counter! + 1
                 questionViewController.scores = scores!
         }else if(segue.identifier == "Done"){
-            if(counter! == (subject?.questions.count)! - 1){
+            if(counter! == (questions.count) - 1){
             let completeViewController = segue.destinationViewController as! CompleteViewController
                 completeViewController.counter = counter
                 completeViewController.scores = scores

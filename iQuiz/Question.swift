@@ -9,18 +9,18 @@
 //questionName = text
 //correctAnswer = answer
 //
-
-import UIKit
-
-class Question: NSObject {
-    
-    var questionName: String
-    var correctAnswer: String
-    var answers : NSMutableArray
-    
-    init?(questionName: String, correctAnswer: String, answers :  NSMutableArray) {
-        self.questionName = questionName
-        self.correctAnswer = correctAnswer
-        self.answers = answers
-    }
-}
+//
+//import UIKit
+//
+//class Question: NSObject {
+//    
+//    var questionName: String
+//    var correctAnswer: String
+//    var answers : NSMutableArray
+//    
+//    init?(questionName: String, correctAnswer: String, answers :  NSMutableArray) {
+//        self.questionName = questionName
+//        self.correctAnswer = correctAnswer
+//        self.answers = answers
+//    }
+//}

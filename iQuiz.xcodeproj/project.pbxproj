@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9DB9827E1BFEA25200B3C2B2 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB9827D1BFEA25200B3C2B2 /* SettingViewController.swift */; };
 		ADBE73DB1BF26253001B08D3 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBE73DA1BF26253001B08D3 /* QuestionViewController.swift */; };
 		ADBE73DF1BF2BF10001B08D3 /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBE73DE1BF2BF10001B08D3 /* AnswerViewController.swift */; };
 		ADBE73E11BF2CD2B001B08D3 /* CompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBE73E01BF2CD2B001B08D3 /* CompleteViewController.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9DB9827D1BFEA25200B3C2B2 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		ADBE73DA1BF26253001B08D3 /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		ADBE73DE1BF2BF10001B08D3 /* AnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
 		ADBE73E01BF2CD2B001B08D3 /* CompleteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompleteViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				ADBE73DA1BF26253001B08D3 /* QuestionViewController.swift */,
 				ADBE73DE1BF2BF10001B08D3 /* AnswerViewController.swift */,
 				ADBE73E01BF2CD2B001B08D3 /* CompleteViewController.swift */,
+				9DB9827D1BFEA25200B3C2B2 /* SettingViewController.swift */,
 			);
 			path = iQuiz;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 				ADBE73DB1BF26253001B08D3 /* QuestionViewController.swift in Sources */,
 				ADDE5EFE1BE96F4400F0080E /* ViewController.swift in Sources */,
 				ADBE73DF1BF2BF10001B08D3 /* AnswerViewController.swift in Sources */,
+				9DB9827E1BFEA25200B3C2B2 /* SettingViewController.swift in Sources */,
 				ADBE73E11BF2CD2B001B08D3 /* CompleteViewController.swift in Sources */,
 				ADDE5F361BF1AA3F00F0080E /* Question.swift in Sources */,
 				ADDE5F0E1BE96F9C00F0080E /* Subject.swift in Sources */,

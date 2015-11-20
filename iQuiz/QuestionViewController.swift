@@ -23,6 +23,7 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var AnswerC: UILabel!
     @IBOutlet weak var AnswerD: UILabel!
     
+    
     @IBAction func aButton(sender: UIButton) {
         userAnswer = AnswerA.text!
     }
@@ -36,31 +37,28 @@ class QuestionViewController: UIViewController {
         userAnswer = AnswerD.text!
     }
     
-    var subject : Subject?
+
     var counter : Int = 0
-    var questionCount : Int = 0
     var scores : Int = -1
-   
+    var questions : NSMutableArray!
+    var question : AnyObject!
+    var answers : Array<String>!
+    var rightAnswer : String = ""
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-        if let subject = subject {
-            questionCount = subject.questions.count
-//            SubjectName.text = subject.subjectName
-//            questionField.text = subject.questions[counter].questionName
-//            AnswerA.text = subject.questions[counter].answerA
-//            AnswerB.text = subject.questions[counter].answerB
-//            AnswerC.text = subject.questions[counter].answerC
-//            AnswerD.text = subject.questions[counter].answerD
-            SubjectName.text = subject.subjectName
-            questionField.text = ""
-            AnswerA.text = ""
-            AnswerB.text = ""
-            AnswerC.text = ""
-            AnswerD.text = ""
-        }
+        if let questions = questions {
+            question = questions[counter]
+            questionField.text = String(question["text"]!!)
+            AnswerA.text = String(question["answers"]!![0])
+            AnswerB.text = String(question["answers"]!![1])
+            AnswerC.text = String(question["answers"]!![2])
+            AnswerD.text = String(question["answers"]!![3])
+            let ansIndex = Int(String(question["answer"]!!))! - 1
+            rightAnswer = String(question["answers"]!![ansIndex])
+            print("correctAnswer: \(rightAnswer)")
+     }
         
     }
 
@@ -68,23 +66,15 @@ class QuestionViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    /*
-    // MARK: - Navigation
-    */
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "SubmitAnswer"){
             let answerViewController = segue.destinationViewController as! AnswerViewController
-            answerViewController.subject = subject
+            answerViewController.questions = questions
             answerViewController.counter = counter
             answerViewController.scores = scores
             answerViewController.answer = userAnswer
+            answerViewController.rightAnswer = rightAnswer
         }
-        
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
-
-
 }
